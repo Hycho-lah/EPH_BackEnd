@@ -6,20 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const database_module_1 = require("../DataBase/database.module");
+const INYPerson_provider_1 = require("./INYPerson.provider");
+const INYPerson_controller_1 = require("./INYPerson.controller");
+const INYPerson_service_1 = require("./INYPerson.service");
 const common_1 = require("@nestjs/common");
-const database_module_1 = require("./DataBase/database.module");
-const weather_module_1 = require("./Weather/weather.module");
-const INYPerson_module_1 = require("./NY_Person_Info/INYPerson.module");
-let AppModule = class AppModule {
+let INYPersonModule = class INYPersonModule {
 };
-AppModule = __decorate([
+INYPersonModule = __decorate([
     common_1.Module({
         imports: [
             database_module_1.DatabaseModule,
-            weather_module_1.WeatherModule,
-            INYPerson_module_1.INYPersonModule,
+        ],
+        controllers: [
+            INYPerson_controller_1.INYPersonController,
+        ],
+        components: [
+            INYPerson_provider_1.INYPersonProvider,
+            INYPerson_service_1.INYPersonService,
         ],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], INYPersonModule);
+exports.INYPersonModule = INYPersonModule;
+//# sourceMappingURL=INYPerson.module.js.map
