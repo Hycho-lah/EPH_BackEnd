@@ -1,7 +1,7 @@
 export interface INYPersonInfoInterface {
   readonly id: number;
   readonly oldParticipantId: string;
-  readonly addressId: number;
+  readonly addressId: any;
   readonly lastName: string;
   readonly firstName: string;
   readonly phone: number;

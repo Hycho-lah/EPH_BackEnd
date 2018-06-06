@@ -21,38 +21,38 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const NYPerson_service_1 = require("./NYPerson.service");
-let INYPersonController = class INYPersonController {
-    constructor(INYPersonServce) {
-        this.INYPersonServce = INYPersonServce;
+const address_service_1 = require("./address.service");
+let AddressController = class AddressController {
+    constructor(addressService) {
+        this.addressService = addressService;
     }
-    getAllINYPerson() {
+    getAllAddress() {
         return __awaiter(this, void 0, void 0, function* () {
-            const msg = yield this.INYPersonServce.getAllINYPerson();
+            const msg = yield this.addressService.getAllAddress();
             return msg;
         });
     }
-    getINYPersonById(params) {
+    getAddressById(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const msg = yield this.INYPersonServce.getINYPersonById(params.id);
+            const msg = yield this.addressService.getAddressById(params.id);
             return msg;
         });
     }
-    addINYPerson(INYPerson) {
+    addAddress(address) {
         return __awaiter(this, void 0, void 0, function* () {
-            const msg = yield this.INYPersonServce.addINYPerson(INYPerson);
+            const msg = yield this.addressService.addAddress(address);
             return msg;
         });
     }
-    updateINYPerson(NewINYPerson, params) {
+    updateAddress(params, newAddress) {
         return __awaiter(this, void 0, void 0, function* () {
-            const msg = yield this.INYPersonServce.updateINYPerson(params.id, NewINYPerson);
+            const msg = yield this.addressService.updateAddress(params.id, newAddress);
             return msg;
         });
     }
-    deleteINYPerson(params) {
+    deleteAddress(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const msg = yield this.INYPersonServce.deleteINYPerson(params.id);
+            const msg = yield this.addressService.deleteAddress(params.id);
             return msg;
         });
     }
@@ -62,38 +62,38 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], INYPersonController.prototype, "getAllINYPerson", null);
+], AddressController.prototype, "getAllAddress", null);
 __decorate([
     common_1.Get(':id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
-], INYPersonController.prototype, "getINYPersonById", null);
+], AddressController.prototype, "getAddressById", null);
 __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
-], INYPersonController.prototype, "addINYPerson", null);
+], AddressController.prototype, "addAddress", null);
 __decorate([
     common_1.Patch(':id'),
-    __param(0, common_1.Body()), __param(1, common_1.Param()),
+    __param(0, common_1.Param()), __param(1, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
-], INYPersonController.prototype, "updateINYPerson", null);
+], AddressController.prototype, "updateAddress", null);
 __decorate([
     common_1.Delete(':id'),
     __param(0, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
-], INYPersonController.prototype, "deleteINYPerson", null);
-INYPersonController = __decorate([
-    common_1.Controller('INYPerson'),
-    __metadata("design:paramtypes", [NYPerson_service_1.NYPersonService])
-], INYPersonController);
-exports.INYPersonController = INYPersonController;
-//# sourceMappingURL=INYPerson.controller.js.map
+], AddressController.prototype, "deleteAddress", null);
+AddressController = __decorate([
+    common_1.Controller('address'),
+    __metadata("design:paramtypes", [address_service_1.AddressService])
+], AddressController);
+exports.AddressController = AddressController;
+//# sourceMappingURL=address.controller.js.map

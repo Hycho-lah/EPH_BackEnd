@@ -1,10 +1,10 @@
 import { Controller, Get, Patch, Post, Delete, Param, Body} from '@nestjs/common';
-import { INYPersonService} from './INYPerson.service';
+import { NYPersonService} from './NYPerson.service';
 
 @Controller('INYPerson')
-export class INYPersonController {
+export class NYPersonController {
   constructor(
-    private INYPersonServce: INYPersonService,
+    private INYPersonServce: NYPersonService,
   ){}
   @Get()
   public async getAllINYPerson() {

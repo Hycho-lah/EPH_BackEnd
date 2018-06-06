@@ -7,25 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_module_1 = require("../DataBase/database.module");
-const NYPerson_provider_1 = require("./NYPerson.provider");
-const INYPerson_controller_1 = require("./INYPerson.controller");
-const NYPerson_service_1 = require("./NYPerson.service");
+const address_controller_1 = require("./address.controller");
+const address_service_1 = require("./address.service");
 const common_1 = require("@nestjs/common");
-let INYPersonModule = class INYPersonModule {
+const address_provider_1 = require("./address.provider");
+let AddressModule = class AddressModule {
 };
-INYPersonModule = __decorate([
+AddressModule = __decorate([
     common_1.Module({
         imports: [
             database_module_1.DatabaseModule,
         ],
         controllers: [
-            INYPerson_controller_1.INYPersonController,
+            address_controller_1.AddressController,
         ],
         components: [
-            NYPerson_provider_1.NYPersonProvider,
-            NYPerson_service_1.NYPersonService,
+            address_service_1.AddressService,
+            address_provider_1.AddressProvider,
         ],
     })
-], INYPersonModule);
-exports.INYPersonModule = INYPersonModule;
-//# sourceMappingURL=INYPerson.module.js.map
+], AddressModule);
+exports.AddressModule = AddressModule;
+//# sourceMappingURL=address.module.js.map

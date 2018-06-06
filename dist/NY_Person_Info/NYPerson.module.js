@@ -8,24 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_module_1 = require("../DataBase/database.module");
 const NYPerson_provider_1 = require("./NYPerson.provider");
-const INYPerson_controller_1 = require("./INYPerson.controller");
+const NYPerson_controller_1 = require("./NYPerson.controller");
 const NYPerson_service_1 = require("./NYPerson.service");
 const common_1 = require("@nestjs/common");
-let INYPersonModule = class INYPersonModule {
+let NYPersonModule = class NYPersonModule {
 };
-INYPersonModule = __decorate([
+NYPersonModule = __decorate([
     common_1.Module({
         imports: [
             database_module_1.DatabaseModule,
         ],
         controllers: [
-            INYPerson_controller_1.INYPersonController,
+            NYPerson_controller_1.NYPersonController,
         ],
         components: [
             NYPerson_provider_1.NYPersonProvider,
             NYPerson_service_1.NYPersonService,
         ],
     })
-], INYPersonModule);
-exports.INYPersonModule = INYPersonModule;
-//# sourceMappingURL=INYPerson.module.js.map
+], NYPersonModule);
+exports.NYPersonModule = NYPersonModule;
+//# sourceMappingURL=NYPerson.module.js.map

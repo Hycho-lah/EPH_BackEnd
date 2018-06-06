@@ -9,7 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const database_module_1 = require("./DataBase/database.module");
 const weather_module_1 = require("./Weather/weather.module");
-const INYPerson_module_1 = require("./NY_Person_Info/INYPerson.module");
+const NYPerson_module_1 = require("./NY_Person_Info/NYPerson.module");
+const address_module_1 = require("./Address/address.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -17,7 +18,8 @@ AppModule = __decorate([
         imports: [
             database_module_1.DatabaseModule,
             weather_module_1.WeatherModule,
-            INYPerson_module_1.INYPersonModule,
+            NYPerson_module_1.NYPersonModule,
+            address_module_1.AddressModule
         ],
     })
 ], AppModule);
