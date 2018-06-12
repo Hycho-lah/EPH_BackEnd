@@ -1,4 +1,4 @@
-# eph-backend
+# EHP-backend
 
 ## Description
 
